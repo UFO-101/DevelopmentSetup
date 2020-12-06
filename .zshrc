@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/josephmiller/.oh-my-zsh"
+export ZSH="/home/joseph/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -75,7 +75,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions)
+plugins=(
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,15 +109,19 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+
+
 # NON-OH-MY-ZSH STUFF
 
-#source "/usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme"
+
+
+
+
+# END OF NON-OH-MY-ZSH STUFF
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-#MUST BE AT THE END
-source /usr/local/Cellar/zsh-syntax-highlighting/0.7.1/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+# Technicaly this fuzzy finder (fzf) isn't specific to oh-my-zsh (or even zsh).
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
