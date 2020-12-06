@@ -108,33 +108,6 @@ source $ZSH/oh-my-zsh.sh
 
 # NON-OH-MY-ZSH STUFF
 
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
-export PATH="/usr/local/Cellar/tomcat/9.0.38/libexec/lib/postgresql-42.1.4.jar:$PATH"
-export PATH="/usr/local/Cellar/tomcat/9.0.38/libexec/lib/mysql-connector-java-8.0.19.jar:$PATH"
-export PATH="/usr/local/Cellar/tomcat/9.0.38/libexec/lib/ojdbc8-12.2.0.1.jar:$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
-export PATH="/usr/local/opt/node@12/bin:$PATH"
-export PATH="/opt/spark/bin:$PATH"
-export PATH="/usr/local/opt/awscli@1/bin:$PATH"
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/josephmiller/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/josephmiller/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/josephmiller/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/josephmiller/google-cloud-sdk/completion.zsh.inc'; fi
-
-export AWS_USERNAME=joseph.miller
-source ~/Documents/Privitar/Scripts/cloud-user-tools/aws/switch-profile.sh
-
-export PATH="/usr/local/Cellar/parquet-tools/1.11.1/bin:$PATH"
-export PATH="/usr/local/Cellar/parquet-tools/1.11.1/libexec:$PATH"
-
-export IONIC_PERSISTOR_PASSWORD=ritornerdhearchrosmet
-
-# from https://gist.github.com/viecode09/ad56b09bea4da59b4240d45b666321cf
-#alias hstart=<"/usr/local/Cellar/hadoop/3.3.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/3.3.0/sbin/start-yarn.sh">
-#alias hstop=<"/usr/local/Cellar/hadoop/3.3.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/3.3.0/sbin/stop-dfs.sh">
-
-export _JAVA_OPTIONS="-Dwebdriver.chrome.driver=/usr/local/Caskroom/chromedriver/84.0.4147.30/chromedriver"
 #source "/usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
