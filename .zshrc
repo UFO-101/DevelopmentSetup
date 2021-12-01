@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/joseph/.oh-my-zsh"
+export ZSH="/Users/josephmiller/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -75,10 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-	)
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,19 +106,63 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-
-
 # NON-OH-MY-ZSH STUFF
 
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+export PATH="/usr/local/Cellar/tomcat/9.0.38/libexec/lib/postgresql-42.1.4.jar:$PATH"
+export PATH="/usr/local/Cellar/tomcat/9.0.38/libexec/lib/mysql-connector-java-8.0.19.jar:$PATH"
+export PATH="/usr/local/Cellar/tomcat/9.0.38/libexec/lib/ojdbc8-12.2.0.1.jar:$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH="/opt/spark/bin:$PATH"
+export PATH="/usr/local/opt/awscli@1/bin:$PATH"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/josephmiller/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/josephmiller/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/josephmiller/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/josephmiller/google-cloud-sdk/completion.zsh.inc'; fi
 
 
+# Commands to switch between Java versions. Default is 8. Just type 'java8' or 'java11'. There are tools to handle this stuff but they didn't seem worth.
+export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export JAVA_11_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
 
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
 
-# END OF NON-OH-MY-ZSH STUFF
+#default java8
+export JAVA_HOME=$JAVA_8_HOME
 
+export AWS_USERNAME=joseph.miller
+source ~/Privitar/Scripts/cloud-user-tools/aws/switch-profile.sh
+
+export PATH="/usr/local/Cellar/parquet-tools/1.11.1/bin:$PATH"
+export PATH="/usr/local/Cellar/parquet-tools/1.11.1/libexec:$PATH"
+
+export IONIC_PERSISTOR_PASSWORD=ritornerdhearchrosmet
+export IONIC_PASSWORD=ritornerdhearchrosmet
+
+export RDS_SNAPSHOT_ID=arn:aws:rds:eu-west-1:423009687165:snapshot:michael3-db
+export RDS_SNAPSHOT_SECRET=arn:aws:secretsmanager:eu-west-1:423009687165:secret:michael-snapshot-secret-689d6g
+
+# from https://gist.github.com/viecode09/ad56b09bea4da59b4240d45b666321cf
+alias hstart='/usr/local/Cellar/hadoop/3.3.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/3.3.0/sbin/start-yarn.sh'
+alias hstop='/usr/local/Cellar/hadoop/3.3.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/3.3.0/sbin/stop-dfs.sh'
+alias yarn='command yarnpkg'
+
+export PATH="/Users/josephmiller/Privitar/nimbus/dev-env:$PATH"
+
+export _JAVA_OPTIONS="-Dwebdriver.chrome.driver=/usr/local/Caskroom/chromedriver/87.0.4280.88/chromedriver"
+#source "/usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Technicaly this fuzzy finder (fzf) isn't specific to oh-my-zsh (or even zsh).
+
+#MUST BE AT THE END
+source /usr/local/Cellar/zsh-syntax-highlighting/0.7.1/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
