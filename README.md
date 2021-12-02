@@ -11,6 +11,9 @@
 3. Install VSCode.
 
     Add Vim plugin. Set vimrc to ~/.ideavimrc
+    
+    
+Other program to consider: Smooze
 
 # Terminal Config
 
