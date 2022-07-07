@@ -17,6 +17,8 @@ Other program to consider: Smooze
 
 # Terminal Config
 
+0. Install Homebrew (https://brew.sh/)
+
 1. install yadm (https://yadm.io/)
 
 2. Clone this repository into home directory using yadm:
