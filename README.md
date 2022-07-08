@@ -10,10 +10,10 @@
 
 3. Install VSCode.
 
-    Add Vim plugin. Set vimrc to ~/.ideavimrc
+    Add Vim plugin. Enable vimrc and set location to ~/.ideavimrc
     
     
-Other program to consider: Smooze
+Another program to consider: Smooze
 
 # Terminal Config
 
@@ -22,42 +22,51 @@ Other program to consider: Smooze
 1. install yadm (https://yadm.io/)
 
 2. Clone this repository into home directory using yadm:
-    yadm clone ....
+    `yadm clone ....`
 
-3. brew install zsh
+3. `brew install zsh`
 
 4. Install oh-my-zsh: https://ohmyz.sh/
 
-5. ** brew install tmux
+5. `brew install tmux`
 
-6. brew install --cask alacritty
+6. `brew install --cask alacritty`
 
-    Copy alacritty.info from https://github.com/alacritty/alacritty/tree/master/extra.
-    Run:
+    Copy alacritty.info from https://github.com/alacritty/alacritty/tree/master/extra:
+    ```
     sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+    ```
     Check it worked with:
+    ```
     infocmp alacritty
+    ```
 
-    This is so you can set
-    env: TERM: alacritty
-    in .alacritty.yml 
+    This is so you can set `env: TERM: alacritty` in `.alacritty.yml` (which should already be done)
 
 7. Install powerlevel10k fonts: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
 8. Install oh-my-zsh plugins:
-
-(I don't know why some of the lines are striked through)
+```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+9. install tmux plugin manager
 
-
-
-If the symbols aren't working you aren't using the font.
-
-** I think the tmux plugin manager might install itself. But if it doesn't:
-You need to install tmux plugins manager (https://github.com/tmux-plugins/tpm)
+```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Refresh tmux plugin manager (see below) and it should automatically install the plugins.
+
+# Troubleshooting and Tips
+
+yadm is basically a wrapper of git. It has the same commands so you can do `yadm status` etc.
+
+If the symbols aren't working in `p10k configure` you aren't using the powerline font.
+
+The oh-my-zsh plugins require some config in ~/.zshrc. It should already be done.
 
 The prefix key for tmux is bound to Control+b (which is the default)
 So to refresh tmux plugin manager do Control+b, shift+i
