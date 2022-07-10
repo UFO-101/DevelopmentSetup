@@ -12,6 +12,8 @@
 
     Add Vim plugin. Enable vimrc and set location to ~/.ideavimrc
     
+4. Install Insomnia (for API dev) - https://insomnia.rest/
+    
     
 Another program to consider: Smooze
 
