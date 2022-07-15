@@ -33,17 +33,14 @@ Another program to consider: Smooze
 5. `brew install tmux`
 
 6. `brew install --cask alacritty`
-
-    Copy alacritty.info from https://github.com/alacritty/alacritty/tree/master/extra:
-    ```
-    sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
-    ```
-    Check it worked with:
     ```
     infocmp alacritty
     ```
-
-    This is so you can set `env: TERM: alacritty` in `.alacritty.yml` (which should already be done)
+    Should return text without any errors. If it doesn't, download alacritty.info from https://github.com/alacritty/alacritty/tree/master/extra and run:
+    ```
+    sudo tic -xe alacritty,alacritty-direct ~/Downloads/alacritty.info
+    ```
+    This is so you can set `env: TERM: alacritty` in `.alacritty.yml` (which should already be done). Source: https://github.com/alacritty/alacritty/blob/master/INSTALL.md#post-build.
 
 7. Install powerlevel10k fonts: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
@@ -78,3 +75,7 @@ The oh-my-zsh plugins require some config in ~/.zshrc. It should already be done
 
 The prefix key for tmux is bound to Control+b (which is the default)
 So to refresh tmux plugin manager do Control+b, shift+i
+
+I had issues with launching Alacritty from spotlight/launchpad on M1 mac. Solution detailed here: https://github.com/alacritty/alacritty/issues/5419#issuecomment-1185836951
+
+Vim-like input is enabled on command line with default oh-my-zsh plugin, `vi-mode`.
