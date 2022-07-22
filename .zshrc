@@ -1,3 +1,8 @@
+# Stop Alacritty dock icon from bouncing.
+# See https://github.com/alacritty/alacritty/issues/2950#issuecomment-706610878
+# Before Powerlevel10k instant prompt so it doesn't complain about I/O during zsh initialization.
+printf "\e[?1042l"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
