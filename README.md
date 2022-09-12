@@ -2,6 +2,8 @@
 1. Install Rectangle (https://rectangleapp.com/)
 
     Import config using UI from RectangleConfig.json
+    
+2. Install AltTab (https://alt-tab-macos.netlify.app/)
 
 2. Intall JetBrains toolbox
 
