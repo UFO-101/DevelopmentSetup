@@ -21,6 +21,8 @@ Another program to consider: Smooze
 
 0. Install Homebrew (https://brew.sh/)
 
+Run the suggested commands to add to path.
+
 1. install yadm (https://yadm.io/)
 
 2. Clone this repository into home directory using yadm:
@@ -29,6 +31,8 @@ Another program to consider: Smooze
 3. `brew install zsh`
 
 4. Install oh-my-zsh: https://ohmyz.sh/
+
+This seems to overwrite my `.zshrc` by default. You can check if there's any new configs worth having but overwise just use `yadm restore .zshrc`.
 
 5. `brew install tmux`
 
