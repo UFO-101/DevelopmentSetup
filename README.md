@@ -14,6 +14,12 @@
 
     Add Vim plugin. Enable vimrc and set location to ~/.ideavimrc
     
+    If holding keys down doesn't work try:
+    ```
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+    ```
+    Source: https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode
+    
 4. Install Insomnia (for API dev) - https://insomnia.rest/
     
     
