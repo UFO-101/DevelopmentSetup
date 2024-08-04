@@ -83,7 +83,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k" # robbyrussell
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions vi-mode)
+plugins=(zsh-autosuggestions vi-mode zsh-syntax-highlighting)
 bindkey -M viins jk vi-cmd-mode
 VI_MODE_SET_CURSOR=true
 
@@ -120,10 +120,19 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
+export PATH='/Users/josephmiller/Library/Python/3.8/bin':$PATH
+export PATH='/Users/josephmiller/Documents/FAR/Selenium':$PATH
+export PATH='/Users/josephmiller/.my-bins':$PATH
+export PATH="/Users/josephmiller/.local/bin:$PATH"
+export PATH="/Users/josephmiller/Library/Python/3.11/bin:$PATH"
+
+# FAR AI FLAMINGO CLUSTER
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export KUBECONFIG="${HOME}/.kube/config:${HOME}/Documents/FAR/flamingo/kubeconfig"
+alias k="kubectl"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #MUST BE AT THE END
-source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

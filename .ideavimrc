@@ -1,7 +1,2 @@
-" This is a comment out of: set clipboard+=unnamed
-imap jk <Esc>
+source ~/.vimrc
 
-" nmap oo o<Esc>
-" nmap OO O<Esc>k
-
-set relativenumber
