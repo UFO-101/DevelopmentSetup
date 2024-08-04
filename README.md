@@ -12,7 +12,7 @@
 
 3. Install VSCode.
 
-    Add Vim plugin. Enable vimrc and set location to ~/.ideavimrc
+    Add NeoVim plugin.
     
     If holding keys down doesn't work try:
     ```
@@ -53,6 +53,7 @@ This seems to overwrite my `.zshrc` by default. You can check if there's any new
     sudo tic -xe alacritty,alacritty-direct ~/Downloads/alacritty.info
     ```
     This is so you can set `env: TERM: alacritty` in `.alacritty.yml` (which should already be done). Source: https://github.com/alacritty/alacritty/blob/master/INSTALL.md#post-build.
+    Update (I've unset `env: TERM: alacritty`, because it seems to cause problems sometimes and alacritty can set it automatically when appropriate. I don't know if that makes the instruction above irrelevant)
 
 7. Install powerlevel10k fonts: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
