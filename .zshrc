@@ -115,6 +115,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Disable automatic escaping of pasted text
+unset zle_bracketed_paste
+
 # NON-OH-MY-ZSH STUFF
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -128,7 +131,7 @@ export PATH="/Users/josephmiller/Library/Python/3.11/bin:$PATH"
 
 # FAR AI FLAMINGO CLUSTER
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export KUBECONFIG="${HOME}/.kube/config:${HOME}/Documents/FAR/flamingo/kubeconfig"
+export KUBECONFIG="${HOME}/.kube/config"
 alias k="kubectl"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
